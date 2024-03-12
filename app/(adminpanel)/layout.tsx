@@ -140,7 +140,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
             <HStack spacing={{ base: '0', md: '6' }}>
                 <Flex alignItems={'center'}>
                     <Menu id="navbar" isLazy>
-                        <MenuButton py={2} transition="all 0.3s" _focus={{ boxShadow: 'none' }}>
+                        <MenuButton py={2} transition="all 0.3s" _focus={{ boxShadow: 'none' }} aria-label='login-user-button'>
                             <HStack>
                                 <Avatar
                                     size={'sm'}
