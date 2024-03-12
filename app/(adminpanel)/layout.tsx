@@ -51,6 +51,7 @@ const LinkItems: Array<LinkItemProps> = [
     { name: 'Dashboard', href: '/', icon: FiHome },
     { name: 'Transactions', href: '/transactions', icon: FiList },
     { name: 'Kiosks', href: '/kiosks', icon: FiList },
+    { name: 'Hello', href: '/hello', icon: FiList },
 ];
 
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
