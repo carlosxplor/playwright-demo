@@ -4,15 +4,13 @@ import {
     FormLabel,
     FormErrorMessage,
     Input,
-    Checkbox,
     Stack,
-    Link,
-    Button,
     Heading,
     useColorModeValue,
 } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
 
+import { Button } from '../../components/elements/Button';
 import { LoginRequest } from '../../dtos/Login';
 import { BRAND_NAME } from '../../constants';
 
@@ -79,8 +77,8 @@ export const LoginForm = ({ handleForm }: LoginFormProps) => {
                             }}
                             type="submit"
                             mt={8}
-                            isLoading={isSubmitting}
-                            isDisabled={isSubmitting}
+                            //isLoading={isSubmitting}
+                            //isDisabled={isSubmitting}
                         >
                             Log In
                         </Button>
