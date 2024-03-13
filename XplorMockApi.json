@@ -14,21 +14,87 @@
       "endpoint": "auth/login",
       "responses": [
         {
-          "uuid": "cef55963-690b-4448-8a24-36b7a60e2105",
-          "body": "{\n    \"code\": 200,\n    \"message\": \"Login Success\",\n    \"data\": {\n        \"user\": {\n            \"_id\": 16,\n            \"name\": \"SELECTION\",\n            \"lastName\": \"ONE\",\n            \"email\": \"selection@getxplor.com\",\n            \"typeUser\": \"REGULAR\",\n            \"profile\": {\n                \"_id\": 4,\n                \"name\": \"DEMO SELECTION\",\n                \"roles\": [\n                    {\n                        \"name\": \"View Log\",\n                        \"code\": \"view-log\"\n                    },\n                    {\n                        \"name\": \"View Dashboard\",\n                        \"code\": \"view-dashboard\"\n                    },\n                    {\n                        \"name\": \"View Dashboard General\",\n                        \"code\": \"view-dashboard-general\"\n                    },\n                    {\n                        \"name\": \"Create Device\",\n                        \"code\": \"create-device\"\n                    },\n                    {\n                        \"name\": \"Update Device\",\n                        \"code\": \"update-device\"\n                    },\n                    {\n                        \"name\": \"View Device\",\n                        \"code\": \"view-device\"\n                    },\n                    {\n                        \"name\": \"List Device\",\n                        \"code\": \"list-device\"\n                    },\n                    {\n                        \"name\": \"Delete Device\",\n                        \"code\": \"delete-device\"\n                    },\n                    {\n                        \"name\": \"List Transaction\",\n                        \"code\": \"list-transaction\"\n                    },\n                    {\n                        \"name\": \"List Tracking\",\n                        \"code\": \"list-tracking\"\n                    }\n                ]\n            },\n            \"companyRaw\": {\n                \"_id\": 7,\n                \"name\": \"DEMO TRIBUNALES\",\n                \"ruc\": \"kaas-demo tribunales\",\n                \"token\": \"2d5a46d7-8e3f-4dd1-a64a-e6c1ab093c88\",\n                \"logo\": \"https://cdn.getxplor.com/KAAS/company/MASTER/logo/logo-MASTER.png\",\n                \"color\": \"#ffffff\",\n                \"products\": [\n                    \"--\",\n                    \"***\"\n                ],\n                \"typeCustomer\": \"FACTURATION\",\n                \"startDate\": \"2023-04-25\",\n                \"endDate\": \"2024-04-25\",\n                \"quantityDevice\": 10,\n                \"status\": \"ACTIVE\",\n                \"createdBy\": 2,\n                \"updatedBy\": 1,\n                \"createdAt\": \"2023-04-25T15:26:28.000Z\",\n                \"updatedAt\": \"2023-04-28T00:22:25.508Z\"\n            }\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjE2LCJpYXQiOjE2OTAzODkxMzUsImV4cCI6MTY5MDQxMDczNX0.ED4t6Lrp4oicn3us0eBRB16WPbpvI5wZddWR-RKpje4\"\n    }\n}",
+          "uuid": "fa5e4bc4-66b8-4bc3-95a3-90c5ad9f1b16",
+          "body": "",
           "latency": 0,
-          "statusCode": 200,
+          "statusCode": 400,
           "label": "",
           "headers": [],
+          "bodyType": "INLINE",
           "filePath": "",
+          "databucketID": "",
           "sendFileAsBody": false,
           "rules": [],
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
-          "databucketID": "",
+          "crudKey": "id"
+        },
+        {
+          "uuid": "d5d8632a-ed89-422e-9f9b-8960862390d5",
+          "body": "",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "Credenciales Incorrecta",
+          "headers": [],
           "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "email",
+              "value": "pregister@getxplor.com",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "password",
+              "value": "",
+              "invert": true,
+              "operator": "null"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id"
+        },
+        {
+          "uuid": "5dca6891-43b3-4d43-b718-8ca8b146d4d1",
+          "body": "{\n  \"code\": 200,\n  \"message\": \"Login Success\",\n  \"data\": {\n    \"user\": {\n      \"_id\": 16,\n      \"name\": \"SELECTION\",\n      \"lastName\": \"ONE\",\n      \"email\": \"selection@getxplor.com\",\n      \"typeUser\": \"REGULAR\",\n      \"profile\": {\n        \"_id\": 4,\n        \"name\": \"DEMO SELECTION\",\n        \"roles\": [\n          {\n            \"name\": \"View Log\",\n            \"code\": \"view-log\"\n          },\n          {\n            \"name\": \"View Dashboard\",\n            \"code\": \"view-dashboard\"\n          },\n          {\n            \"name\": \"View Dashboard General\",\n            \"code\": \"view-dashboard-general\"\n          },\n          {\n            \"name\": \"Create Device\",\n            \"code\": \"create-device\"\n          },\n          {\n            \"name\": \"Update Device\",\n            \"code\": \"update-device\"\n          },\n          {\n            \"name\": \"View Device\",\n            \"code\": \"view-device\"\n          },\n          {\n            \"name\": \"List Device\",\n            \"code\": \"list-device\"\n          },\n          {\n            \"name\": \"Delete Device\",\n            \"code\": \"delete-device\"\n          },\n          {\n            \"name\": \"List Transaction\",\n            \"code\": \"list-transaction\"\n          },\n          {\n            \"name\": \"List Tracking\",\n            \"code\": \"list-tracking\"\n          }\n        ]\n      },\n      \"companyRaw\": {\n        \"_id\": 7,\n        \"name\": \"DEMO TRIBUNALES\",\n        \"ruc\": \"kaas-demo tribunales\",\n        \"token\": \"2d5a46d7-8e3f-4dd1-a64a-e6c1ab093c88\",\n        \"logo\": \"https://cdn.getxplor.com/KAAS/company/MASTER/logo/logo-MASTER.png\",\n        \"color\": \"#ffffff\",\n        \"products\": [\n          \"--\",\n          \"***\"\n        ],\n        \"typeCustomer\": \"FACTURATION\",\n        \"startDate\": \"2023-04-25\",\n        \"endDate\": \"2024-04-25\",\n        \"quantityDevice\": 10,\n        \"status\": \"ACTIVE\",\n        \"createdBy\": 2,\n        \"updatedBy\": 1,\n        \"createdAt\": \"2023-04-25T15:26:28.000Z\",\n        \"updatedAt\": \"2023-04-28T00:22:25.508Z\"\n      }\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjE2LCJpYXQiOjE2OTAzODkxMzUsImV4cCI6MTY5MDQxMDczNX0.ED4t6Lrp4oicn3us0eBRB16WPbpvI5wZddWR-RKpje4\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "email",
+              "value": "pregister@getxplor.com",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "password",
+              "value": "",
+              "invert": true,
+              "operator": "null"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id"
         }
       ],

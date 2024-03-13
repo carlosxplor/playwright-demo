@@ -12,8 +12,8 @@ class LoginPage {
 
     async login() {
         await this.page.goto('/login');
-        
-        await this.page.getByLabel('Email').fill('example@mail.com')
+        // La API MOCK espera que el correo sea: pregister@getxplor.com
+        await this.page.getByLabel('Email').fill('pregister@getxplor.com')
         await this.page.getByLabel('Password').fill('-Lorem345#-!')
         await this.page.getByRole('button', {name: /Log In/i}).click();
 
