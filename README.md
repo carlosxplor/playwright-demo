@@ -25,9 +25,8 @@ Configurar variables de entorno
 cp .env.example .env.local
 ```
 
+Contenido de `.env.local`
 ```bash
-# .env.local
-
 # Xplor API
 API_ENDPOINT=http://127.0.0.1:8080
 
@@ -35,20 +34,50 @@ API_ENDPOINT=http://127.0.0.1:8080
 NEXTAUTH_SECRET=my_ultra_secure_nextauth_secret
 ```
 
-Ejecutar como desarrollo:
+Instalar Dependencias
+
+```bash
+npm i
+```
+
+### Desarrollo:
+
+Levantar MOCK API
+
+```bash
+npm run mock:api
+```
+
+Levantar Aplicación
 
 ```bash
 npm run dev
 ```
 
-Ejecutar como Producción:
+### E2E Testing
+
+Levantar MOCK API
+
+```bash
+npm run mock:api
+```
+
+Compilar y Levantar Aplicación en modo Producción (Indispensable)
 
 ```bash
 npm run build
 npm run start
 ```
 
-Compilar imagenes y ejecutar contenedor:
+Ejecutar Tests
+
+```bash
+npm run test
+```
+
+### Produccion (Docker)
+
+Compilar Imagenes y Levantar Contenedores
 
 ```bash
 make docker-build

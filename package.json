@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "format": "npx prettier --write .",
+    "mock:api": "npx mockoon-cli start --data ./XplorMockApi.json",
     "test": "npx playwright test"
   },
   "dependencies": {
@@ -31,6 +32,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@mockoon/cli": "^7.0.0",
     "@playwright/test": "^1.42.1",
     "husky": "^4.3.8",
     "prettier": "^2.2.1",
